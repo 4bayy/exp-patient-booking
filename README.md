@@ -61,4 +61,58 @@ onSubmit(data)
 Fewer re-renders
 Better performance
 Smaller bundle size
-Great for large forms
+Great for large 
+
+# BFF
+Next.js as a Backend-for-Frontend (BFF)
+A Backend-for-Frontend is a backend layer designed specifically for a frontend application. In Next.js, Route Handlers can serve as a BFF by receiving requests from the browser and communicating with backend services like ASP.NET Core APIs, Contentful, or third-party APIs. This allows us to hide API keys and backend URLs, manage authentication using HTTP-only cookies, aggregate data from multiple services into a single response, transform data into a frontend-friendly format, and apply caching or revalidation. It keeps the frontend simpler and improves security and maintainability
+
+
+# Prod Architeture 
+
+
+Frontend (React Components)
+    ↓
+API Helper (Client-side)
+    ↓
+Next.js API Routes "/api/server/[...endpoint]" - (Server-side)
+    ↓
+Backend API (External Service)
+
+Browser
+
+↓
+
+Next.js
+
+↓
+
+Route Handlers
+
+↓
+
+.NET API
+
+↓
+
+Database
+
+Why Use a BFF?
+
+Without a BFF:
+
+Browser
+    │
+    ▼
+.NET API
+
+Problems:
+
+Backend URL exposed.
+Tokens handled in the browser.
+CORS configuration required.
+Frontend tightly coupled to backend.
+Harder to aggregate data from multiple APIs.
+
+
+check medium :https://medium.com/digigeek/bff-backend-for-frontend-pattern-with-next-js-api-routes-secure-and-scalable-architecture-d6e088a39855

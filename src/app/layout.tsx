@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
-
+import { Provider } from "react-redux";
+import ReduxProvider from "@/providers/ReduxProvider";
 // const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans")}>
       <body>
-        <main className="">{children}</main>
+        <ReduxProvider>
+          <main className="">{children}</main>
+        </ReduxProvider>
       </body>
     </html>
   );

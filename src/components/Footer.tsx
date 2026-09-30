@@ -8,7 +8,7 @@ import { FaInstagram , FaTwitter , FaFacebook, FaLinkedin } from "react-icons/fa
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1F2937] text-gray-300">
+    <footer className="bg-[#1F2937] text-gray-300 mt-3">
       {/* Top Section */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
@@ -136,33 +136,6 @@ export default function Footer() {
               <Mail size={18} className="text-emerald-400" />
               <span>support@serenityspa.com</span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter */}
-      <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col lg:flex-row justify-between items-center gap-6">
-          <div>
-            <h3 className="text-white text-xl font-semibold">
-              Subscribe to our newsletter
-            </h3>
-
-            <p className="text-gray-400 text-sm mt-1">
-              Get wellness tips, exclusive offers, and new treatment updates.
-            </p>
-          </div>
-
-          <div className="flex w-full lg:w-auto gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-gray-800 border border-gray-700 rounded-xl px-5 py-3 w-full lg:w-80 outline-none focus:border-emerald-500"
-            />
-
-            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 rounded-xl transition">
-              Subscribe
-            </button>
           </div>
         </div>
       </div>
